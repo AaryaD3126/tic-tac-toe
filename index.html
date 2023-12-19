@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <header><h1 style="text-align: center;">Play TIC TAC TOE!</h1></header>
+    <div class="nameLayover namelayoverp1" >
+            <input type="text" placeholder="Enter player 1 name..." id="player-1-name">
+            <div>
+            <button id="player-1-name-submit-btn">Submit</button>
+            <button class="cancelLayover1">Cancel</button>
+        </div>
+    </div>
+    <div class="nameLayover namelayoverp2" >
+        <input type="text" placeholder="Enter player 2 name..." id="player-2-name">
+        <div>
+        <button id="player-2-name-submit-btn">Submit</button>
+        <button class="cancelLayover2">Cancel</button>
+    </div>
+</div>
+    <section class="container">
+        <div class="card-container">
+            <div class="player-card">
+                <span class="player">Player 1</span>
+                <span class="playername playername1">player 1 (default)</span>
+                <span class="title">	&#10005; </span>
+                <button id="callName1">Edit</button>
+                </div>
+            <div class="player-card">
+                <span class="player">Player 2</span>
+                <span class="playername playername2">player 2 (default)</span>
+                <span class="title">&#x4f;</span>
+                <button id="callName2">Edit</button>
+            </div>
+        </div>
+        <button id="start-game">Start Game</button>
+        <div id="message"><h2>x wins!</h2><p>press start game to restart</p></div>
+        <div id="gameBoard">
+                <div class="board_tile remove-left-border remove-top-border" data-row="0" data-column="0"></div>
+                <div class="board_tile remove-top-border" data-row="0" data-column="1"></div>
+                <div class="board_tile remove-right-border remove-top-border" data-row="0" data-column="2"></div>
+                <div class="board_tile remove-left-border" data-row="1" data-column="0"></div>
+                <div class="board_tile" data-row="1" data-column="1"></div>
+                <div class="board_tile remove-right-border" data-row="1" data-column="2"></div>
+                <div class="board_tile remove-left-border remove-bottom-border" data-row="2" data-column="0"></div>
+                <div class="board_tile remove-bottom-border" data-row="2" data-column="1"></div>
+                <div class="board_tile remove-right-border remove-bottom-border" data-row="2" data-column="2"></div>
+        </div>
+    </section>
+    <script src="utils.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(102, 4, 194);
+    color: white;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.card-container {
+    width: 100%;
+    padding: 20px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.player-card{
+    width:300px ;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: rgb(196, 157, 233);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.player{
+    font-size: 25px;
+    font-size: bolder;
+    letter-spacing: 1.1px;
+    color: rgb(33, 6, 58);
+}
+.playername{
+    font-size: 27px;
+    letter-spacing: 1.2px;
+    color: rgb(102, 4, 194);
+}
+.title{
+    font-size: 30px;
+    font: bolder;
+
+}
+.player-card button{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    text-decoration: underline
+    ;
+    color: white;
+}
+
+
+#message{
+    background-color: blueviolet;
+    width: 70%;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 2px;
+    display: none;
+}
+#message h2{
+    color: white;
+    font-size: 30px;
+}
+#message p{
+    
+    color: white;
+    font-size: 20px;
+}
+#start-game{
+    border: none;
+    background-color: blueviolet;
+    font-size: 27px;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    align-self: center;
+}
+
+.nameLayover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow:30px 30px 100px black;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+  
+    z-index: 2;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.nameLayover input{
+    width: 100%;
+    padding: 5px;
+    font-size: 24px;
+    color: black;
+    border: none;
+    outline: none;
+    background-color: rgb(124, 66, 180);
+
+}
+.nameLayover input::placeholder{
+    font-size: 15px;
+    color: rgb(13, 13, 13);
+}
+.nameLayover button{
+    width: 90px;
+    border-radius: 20px;
+    padding: 15px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    margin: 10px;
+}
+.namelayoverp1{
+    display: none;
+}
+.namelayoverp2{
+    display: none;
+}
+
+#gameBoard {
+    display: none;
+    position: relative;
+    z-index: 99;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+    height: 500px;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    transition: z-index 1s ease, height 1s ease;
+}
+
+.board_tile {
+    border: 4px solid blueviolet;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    transition: all 1s ease;
+    color: black;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.new-board_tile {
+    font-size: 6em;
+    font-family: "Roboto", sans-serif;
+    color: cadetblue;
+    opacity: 1;
+}
+
+.remove-left-border {
+    border-left: 1px solid transparent;
+}
+
+.remove-right-border {
+    border-right: 1px solid transparent;
+}
+
+.remove-top-border {
+    border-top: 1px solid transparent;
+}
+
+.remove-bottom-border {
+    border-bottom: 1px solid transparent;
+}
+
+.board_tile:hover{
+    background-color: rgb(218, 184, 250);
+    opacity: 0.5;
+    color: rgb(190, 129, 247);
+    
+}
+
+@media screen and (max-width:1000px){
+    .card-container{
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .container{
+        margin: 0px 5%;
+    }
+    .nameLayover input{
+        width: 100%;
+    }
+}
